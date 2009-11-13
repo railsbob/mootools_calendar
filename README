@@ -1,0 +1,26 @@
+D50CalendarHelper
+=================
+
+A Helper plugin to integrate http://electricprism.com/aeron/calendar/ with rails.
+
+
+Usage
+=======
+Include mootools javascript.
+Copy assets/calendar.js in your public/javascripts and  include it in template header.
+
+In Models, declare:
+
+calendar_for :birthdate
+
+This creates a virtual attribute calendar_birthday for the model.
+
+In Views, use it by putting this at the end of form:
+
+<%= initialize_calendar('<- id of the text field ->', 'd/m/Y') %>
+
+Also make sure you use a text field for inputting the calendar_birthdate field.
+
+<%= form.text_field :calendar_birthdate %>
+
+Copyright (c) 2009 Anup narkhede, released under the MIT license
